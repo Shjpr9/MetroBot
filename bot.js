@@ -19,7 +19,6 @@ try {
     if (["احسان به دستغیب", "دستغیب به احسان"].includes(msg.text)) {
       await setLine(msg.chat.id.toString(), msg.text);
       bot.sendMessage(msg.chat.id, "خط با موفقیت تنظیم شد");
-      return;
     }
     const keyboard = createStationsKeyboard("Shiraz");
     const userLine = await getLine(msg.chat.id.toString());
