@@ -67,7 +67,7 @@ try {
 
     const origin = callbackQuery.data;
     const buttonLabels = JSON.parse(
-      fs.readFileSync("origins.json", "utf8")
+      fs.readFileSync("./src/origins.json", "utf8")
     ).Shiraz;
     const userLine = await getLine(callbackQuery.message.chat.id.toString());
     let messageText = userLine + "\n" + `مبدا شما ${buttonLabels[origin]}:`;
