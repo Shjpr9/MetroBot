@@ -1,4 +1,10 @@
 import sqlite from "sqlite3";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+
 const db = new sqlite.Database(__dirname + "/database.db");
 function registerUser(chat_id) {
   // Check if uesrs table exists

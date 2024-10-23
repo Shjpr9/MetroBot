@@ -2,6 +2,7 @@ import fs from "fs";
 import TelegramBot from "node-telegram-bot-api";
 import { registerUser, setLine, getLine } from "./src/database/db.js";
 import dotenv from "dotenv";
+
 import {
   findMinimumTime,
   divideObject,
@@ -9,6 +10,7 @@ import {
 } from "./src/functions.js";
 
 dotenv.config();
+
 try {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const bot = new TelegramBot(token, { polling: true });
