@@ -42,9 +42,9 @@ function findMinimumTime(origin, userLine) {
       let minimumTime = 0;
       let lineFile = "";
       if (userLine === "احسان به دستغیب") {
-        lineFile = __dirname + "../lines/ehsanDastgheyb.csv";
+        lineFile = __dirname + "/../lines/ehsanDastgheyb.csv";
       } else if (userLine === "دستغیب به احسان") {
-        lineFile = __dirname + "../lines/dastgheybEhsan.csv";
+        lineFile = __dirname + "/../lines/dastgheybEhsan.csv";
       } else {
         return;
       }

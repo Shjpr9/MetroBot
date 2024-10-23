@@ -16,7 +16,9 @@ function registerUser(chat_id) {
         return;
       }
       if (!row) {
-        db.run(`CREATE TABLE users (chat_id INTEGER PRIMARY KEY, line TEXT)`);
+        db.run(
+          `CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, chat_id VARCHAR (32) NOT NULL, line VARCHAR (255))`
+        );
         return;
       }
     }
