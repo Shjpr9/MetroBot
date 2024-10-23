@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 function createStationsKeyboard(origin) {
-  const originsData = fs.readFileSync("./origins.json", "utf8");
+  const originsData = fs.readFileSync("./src/origins.json", "utf8");
   const buttonLabels = JSON.parse(originsData);
   const keyboard = [];
   for (const label in buttonLabels[origin]) {
@@ -36,9 +36,9 @@ function findMinimumTime(origin, userLine) {
       let minimumTime = 0;
       let lineFile = "";
       if (userLine === "احسان به دستغیب") {
-        lineFile = "../lines/ehsanDastgheyb.csv";
+        lineFile = "./lines/ehsanDastgheyb.csv";
       } else if (userLine === "دستغیب به احسان") {
-        lineFile = "../lines/dastgheybEhsan.csv";
+        lineFile = "./lines/dastgheybEhsan.csv";
       } else {
         return;
       }
