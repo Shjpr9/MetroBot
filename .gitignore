@@ -1,0 +1,3 @@
+src/database/database.db
+.env
+node_modules/
